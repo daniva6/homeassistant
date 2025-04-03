@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
 - ../../base
 
-# images:
-  # - name: homeassistant/home-assistant
-    # newTag: 2025.4
+images:
+- name: homeassistant/home-assistant
+  newTag: 2025.4
