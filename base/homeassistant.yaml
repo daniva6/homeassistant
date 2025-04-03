@@ -12,7 +12,7 @@ spec:
         app: homeassistant
     spec:
       containers:
-      - image: homeassistant/home-assistant:2024.11
+      - image: homeassistant/home-assistant:2023.10
         imagePullPolicy: IfNotPresent
         name: homeassistant
         ports:
