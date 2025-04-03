@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: urbackup-client
+spec:
+  selector:
+    matchLabels:
+      app: urbackup-client
+  template:
+    metadata:
+      labels:
+        app: urbackup-client
+    spec:
+      containers:
+      - env:
+        - name: URBACKUP_SERVER_NAME
+          value: <path:k8s-secrets/data/common#urbackup-dsn>
+        - name: URBACKUP_CLIENT_NAME
+          value: homeassistant
+        - name: URBACKUP_CLIENT_AUTHKEY
+          value: <path:k8s-secrets/data/homeassistant#urbackup_client_authkey>
+        image: uroni/urbackup-client:latest
+        name: urbackup-client
+        volumeMounts:
+        - mountPath: /backup
+          name: backup
+      volumes:
+      - name: backup
+        persistentVolumeClaim:
+          claimName: homeassistant-backups-pvc
+
