@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: overlays/dev
-    repoURL: git@github.com:daniva6/homeassistant.git
+    repoURL: https://github.com/daniva6/homeassistant.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
