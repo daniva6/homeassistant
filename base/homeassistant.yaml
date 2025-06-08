@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: homeassistant
+  labels:
+    app.kubernetes.io/name: homeassistantf  
 spec:
   selector:
     matchLabels:
@@ -10,6 +12,7 @@ spec:
     metadata:
       labels:
         app: homeassistant
+        app.kubernetes.io/name: homeassistantf
     spec:
       containers:
       - image: homeassistant/home-assistant:2025.4
