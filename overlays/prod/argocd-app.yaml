@@ -12,7 +12,7 @@ spec:
   source:
     path: overlays/prod
     repoURL: https://github.com/daniva6/homeassistant.git
-    targetRevision: HEAD
+    targetRevision: 2025.4
   syncPolicy:
     syncOptions:
     - CreateNamespace=true       
