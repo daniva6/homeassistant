@@ -37,7 +37,7 @@ jobs:
       - name: 🔧 Update ArgoCD manifest
         run: |
           echo "🛠 Updating targetRevision to ${{ github.event.inputs.version }}"
-          sed -i -E "0/(targetRevision:\s*).*/\1${{ github.event.inputs.version }}/" overlays/prod/argocd-app.yaml
+          sed -i -E "0,/targetRevision:/s/(targetRevision:\s*).*/\1${{ github.event.inputs.version }}/" overlays/prod/argocd-app.yaml
 
       - name: 💾 Commit and push ArgoCD update
         run: |
