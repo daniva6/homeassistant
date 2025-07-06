@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
+  - urbackup-pvc.yaml
   - urbackup-client.yaml
 
 # images:
