@@ -32,5 +32,5 @@ spec:
           claimName: urbackup      
       - name: backup
         persistentVolumeClaim:
-          claimName: homeassistant-backups-pvc
+          claimName: homeassistant-backups-squid
 
