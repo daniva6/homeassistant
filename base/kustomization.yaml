@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
 - homeassistant-backups-squid-pvc.yaml
 - homeassistant-ir.yaml
-- homeassistant-pvc.yaml
-- homeassistant-squid-svc.yaml
+- homeassistant-squid-pvc.yaml
+- homeassistant-svc.yaml
 - homeassistant.yaml
