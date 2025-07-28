@@ -24,7 +24,7 @@ spec:
         volumeMounts:
         - mountPath: /config
           name: homeassistant-pvc
-        - mountPath: /srv
+        - mountPath: /config/backups
           name: homeassistant-backups-pvc
       volumes:
       - name: homeassistant-pvc
