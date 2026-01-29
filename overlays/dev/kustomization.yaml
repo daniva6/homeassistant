@@ -6,4 +6,4 @@ resources:
 
 images:
 - name: homeassistant/home-assistant
-  newTag: "2026.01.0"
+  newTag: "2026.01"
