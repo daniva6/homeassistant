@@ -29,7 +29,7 @@ spec:
       volumes:
       - name: homeassistant-pvc
         persistentVolumeClaim:
-          claimName: homeassistant
+          claimName: homeassistant-pvc
       - name: homeassistant-backups-pvc
         persistentVolumeClaim:
-          claimName: homeassistant-backups
+          claimName: homeassistant-backups-pvc
