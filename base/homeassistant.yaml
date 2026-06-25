@@ -25,11 +25,11 @@ spec:
         - mountPath: /config
           name: homeassistant-pvc
         - mountPath: /config/backups
-          name: homeassistant-backups-squid
+          name: homeassistant-backups-pvc
       volumes:
       - name: homeassistant-pvc
         persistentVolumeClaim:
-          claimName: homeassistant-pvc
+          claimName: homeassistant-squid
       - name: homeassistant-backups-pvc
         persistentVolumeClaim:
           claimName: homeassistant-backups-squid
